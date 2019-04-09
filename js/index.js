@@ -114,7 +114,7 @@ let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"]
 
 
-//The DESTROYER
+//The DESTROYERS!!!! MUAHAHAHA
 let myButton = document.createElement("button");
 myButton.innerHTML = "I WILL DESTROY";
 myButton.style.width = "10%";
@@ -139,9 +139,9 @@ myButton2.style.right = "0";
 myButton2.style.padding = "1%";
 myButton2.style.margin = "1%";
 document.body.appendChild(myButton2);
-myButton.setAttribute("class", "myButton2");
+myButton2.setAttribute("class", "myButton2");
 document.querySelector(".myButton2").addEventListener('click', function() {
-  myButton2.style.color = "red", document.querySelector("contact").textContent = " ";});
+  myButton2.style.color = "red", document.querySelector(".cta").textContent = " ";});
 
 
 let myButton3 = document.createElement("button");
@@ -153,9 +153,9 @@ myButton3.style.left = "0";
 myButton3.style.padding = "1%";
 myButton3.style.margin = "1%";
 document.body.appendChild(myButton3);
-myButton.setAttribute("class", "myButton3");
+myButton3.setAttribute("class", "myButton3");
 document.querySelector(".myButton3").addEventListener('click', function() {
-  myButton3.style.color = "white", document.querySelector("main-content").textContent = " ";});
+  myButton3.style.color = "white", document.querySelector(".main-content").textContent = " ";});
 
 
 let myButton4 = document.createElement("button");
@@ -167,6 +167,6 @@ myButton4.style.right = "0";
 myButton4.style.padding = "1%";
 myButton4.style.margin = "1%";
 document.body.appendChild(myButton4);
-myButton.setAttribute("class", "myButton4");
+myButton4.setAttribute("class", "myButton4");
 document.querySelector(".myButton4").addEventListener('click', function() {
-  myButton4.style.color = "blue", document.querySelector("cta").textContent = " ";});
+  myButton4.style.color = "blue", document.querySelector(".cta").textContent = " ";});
