@@ -46,13 +46,41 @@ let middle_img = document.getElementById("middle-img");
 middle_img.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //Nav
+/*
 let a = document.querySelectorAll("nav a");
 a[0].innerHTML = siteContent["nav"]["nav-item-1"]
+a[0].style.color = "green";
 a[1].innerHTML = siteContent["nav"]["nav-item-2"]
+a[1].style.color = "green";
 a[2].innerHTML = siteContent["nav"]["nav-item-3"]
+a[2].style.color = "green";
 a[3].innerHTML = siteContent["nav"]["nav-item-4"]
+a[3].style.color = "green";
 a[4].innerHTML = siteContent["nav"]["nav-item-5"]
+a[4].style.color = "green";
 a[5].innerHTML = siteContent["nav"]["nav-item-6"]
+a[5].style.color = "green";
+*/
+
+
+//Figured it out!
+let a = document.querySelectorAll("nav a").forEach((change_color, i)=>{
+change_color.textContent = Object.values(siteContent.nav)[i];
+change_color.style.color = "green";
+});
+
+let newA = document.querySelector("nav");
+newA.appendChild(document.createElement("a"));
+document.querySelector("nav a:last-child").textContent = "Click After";
+document.querySelector("nav a:last-child").style.color = "Red";
+newA.prepend(document.createElement("a"));
+document.querySelector("nav a:first-child").textContent = "Click Before";
+document.querySelector("nav a:first-child").style.color = "Blue";
+
+//Zach is Smart 
+// for(let i = 0; i < a.length; i++) {
+//  a[i].style.color = 'green';
+// }
 
 //cta
 let h1 = document.querySelector(".cta h1");
