@@ -63,12 +63,14 @@ a[5].style.color = "green";
 */
 
 
+
 //Figured it out!
-let a = document.querySelectorAll("nav a").forEach((change_color, i)=>{
-change_color.textContent = Object.values(siteContent.nav)[i];
-change_color.style.color = "green";
+let a = document.querySelectorAll("nav a").forEach((element, i)=>{
+element.textContent = Object.values(siteContent.nav)[i];
+element.style.color = "green";
 });
 
+//new stuff on the nav
 let newA = document.querySelector("nav");
 newA.appendChild(document.createElement("a"));
 document.querySelector("nav a:last-child").textContent = "Click After";
@@ -76,11 +78,6 @@ document.querySelector("nav a:last-child").style.color = "Red";
 newA.prepend(document.createElement("a"));
 document.querySelector("nav a:first-child").textContent = "Click Before";
 document.querySelector("nav a:first-child").style.color = "Blue";
-
-//Zach is Smart 
-// for(let i = 0; i < a.length; i++) {
-//  a[i].style.color = 'green';
-// }
 
 //cta
 let h1 = document.querySelector(".cta h1");
@@ -115,3 +112,61 @@ contact_p[2].innerHTML = siteContent["contact"]["email"]
 //Footer
 let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"]
+
+
+//The DESTROYER
+let myButton = document.createElement("button");
+myButton.innerHTML = "I WILL DESTROY";
+myButton.style.width = "10%";
+myButton.style.position = "fixed";
+myButton.style.bottom = "0";
+myButton.style.left = "0";
+myButton.style.padding = "1%";
+myButton.style.margin = "1%";
+document.body.appendChild(myButton);
+myButton.setAttribute("class", "myButton");
+document.querySelector(".myButton").addEventListener('click', function() {
+  myButton.style.color = "green", document.querySelector("nav").textContent = " ";});
+
+
+
+let myButton2 = document.createElement("button");
+myButton2.innerHTML = "I WILL DESTROY";
+myButton2.style.width = "10%";
+myButton2.style.position = "fixed";
+myButton2.style.top = "0";
+myButton2.style.right = "0";
+myButton2.style.padding = "1%";
+myButton2.style.margin = "1%";
+document.body.appendChild(myButton2);
+myButton.setAttribute("class", "myButton2");
+document.querySelector(".myButton2").addEventListener('click', function() {
+  myButton2.style.color = "red", document.querySelector("contact").textContent = " ";});
+
+
+let myButton3 = document.createElement("button");
+myButton3.innerHTML = "I WILL DESTROY";
+myButton3.style.width = "10%";
+myButton3.style.position = "fixed";
+myButton3.style.top = "0";
+myButton3.style.left = "0";
+myButton3.style.padding = "1%";
+myButton3.style.margin = "1%";
+document.body.appendChild(myButton3);
+myButton.setAttribute("class", "myButton3");
+document.querySelector(".myButton3").addEventListener('click', function() {
+  myButton3.style.color = "white", document.querySelector("main-content").textContent = " ";});
+
+
+let myButton4 = document.createElement("button");
+myButton4.innerHTML = "I WILL DESTROY";
+myButton4.style.width = "10%";
+myButton4.style.position = "fixed";
+myButton4.style.bottom = "0";
+myButton4.style.right = "0";
+myButton4.style.padding = "1%";
+myButton4.style.margin = "1%";
+document.body.appendChild(myButton4);
+myButton.setAttribute("class", "myButton4");
+document.querySelector(".myButton4").addEventListener('click', function() {
+  myButton4.style.color = "blue", document.querySelector("cta").textContent = " ";});
